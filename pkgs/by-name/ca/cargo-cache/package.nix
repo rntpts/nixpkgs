@@ -3,6 +3,8 @@
   stdenv,
   fetchFromGitHub,
   rustPlatform,
+  pkg-config,
+  libgit2,
   zlib,
 }:
 
@@ -19,7 +21,14 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-cwTHJ5Cd17ur8AhEQb8FTS0mcgqg83VGjvCQP00JY6s=";
 
+  env.LIBGIT2_NO_VENDOR = 1;
+
+  nativeBuildInputs = [
+    pkg-config
+  ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [
+    libgit2
     zlib
   ];
 
