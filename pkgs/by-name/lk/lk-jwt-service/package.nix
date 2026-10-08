@@ -21,6 +21,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-fWaeKuE9nr+yKT8ZInR79LDwwg1VsA2jdN/wdhtgln8=";
 
+  # Tests spawn a local webserver
+  __darwinAllowLocalNetworking = true;
+
   checkInputs = [
     cacert
   ];
