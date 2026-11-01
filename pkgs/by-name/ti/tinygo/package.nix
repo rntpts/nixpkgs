@@ -40,6 +40,8 @@ buildGoModule (finalAttrs: {
   pname = "tinygo";
   version = "0.43.0";
 
+  __structuredAttrs = true;
+
   src = fetchFromGitHub {
     owner = "tinygo-org";
     repo = "tinygo";
