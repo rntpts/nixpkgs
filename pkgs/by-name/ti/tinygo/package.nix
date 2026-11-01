@@ -102,7 +102,7 @@ buildGoModule (finalAttrs: {
     export PATH=${bootstrapTools}:$PATH
     export HOME=$TMPDIR
 
-    ldflags=("''$ldflags[@]/\"-buildid=\"")
+    ldflags=("''${ldflags[@]/-buildid=}")
   '';
 
   postBuild = ''
