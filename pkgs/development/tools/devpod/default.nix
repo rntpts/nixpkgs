@@ -79,6 +79,8 @@ let
     pname = "devpod-desktop";
     inherit version src;
 
+    __structuredAttrs = true;
+
     sourceRoot = "${src.name}/desktop";
 
     offlineCache = fetchYarnDeps {
