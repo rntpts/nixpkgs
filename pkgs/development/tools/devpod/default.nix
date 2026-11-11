@@ -47,6 +47,8 @@ let
     pname = "devpod";
     inherit version src meta;
 
+    __structuredAttrs = true;
+
     vendorHash = null;
 
     env.CGO_ENABLED = 0;
