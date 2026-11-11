@@ -14,6 +14,8 @@ buildGoModule (finalAttrs: {
   pname = "soju";
   version = "0.11.1";
 
+  __structuredAttrs = true;
+
   src = fetchFromCodeberg {
     owner = "emersion";
     repo = "soju";
@@ -46,8 +48,10 @@ buildGoModule (finalAttrs: {
     make doc/soju.1 doc/sojuctl.1
   '';
 
+  __darwinAllowLocalNetworking = true;
+
   checkFlags = [
-    "-skip TestPostgresMigrations"
+    "-skip=TestPostgresMigrations"
   ];
 
   postInstall = ''
