@@ -9,6 +9,8 @@ buildGoModule (finalAttrs: {
   pname = "dasel";
   version = "3.11.2";
 
+  __structuredAttrs = true;
+
   src = fetchFromGitHub {
     owner = "TomWright";
     repo = "dasel";
