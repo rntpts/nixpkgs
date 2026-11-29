@@ -8,6 +8,8 @@ buildGoModule (finalAttrs: {
   pname = "go-bindata";
   version = "4.0.2";
 
+  __structuredAttrs = true;
+
   src = fetchFromGitHub {
     owner = "kevinburke";
     repo = "go-bindata";
