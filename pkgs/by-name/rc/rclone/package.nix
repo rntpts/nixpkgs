@@ -18,6 +18,8 @@ buildGoModule (finalAttrs: {
   pname = "rclone";
   version = "1.76.0";
 
+  __structuredAttrs = true;
+
   outputs = [
     "out"
     "man"
